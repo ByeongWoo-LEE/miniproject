@@ -4,19 +4,19 @@ import Nav from './components/Nav';
 import Champions from './components/Champions'
 import Main from './components/Main'
 
+import Header from "./paging/Header.js";
+
 import { Route, Switch } from 'react-router-dom';
 
 
 function App() {
   return (
     <div className="App">
-       <Nav />
-        <Switch>
-          <Route exact path='/' component={Main}/>
-          <Route path='/champions' component={Champions}/>
-          <Route component={() => <h2>Not Found!</h2>}/>
-        </Switch>
+       <Header onDrawerToggle={function (): void {
+        throw new Error('Function not implemented.');
+      } }/>
     </div>
+    
   );
 }
 export default App;
